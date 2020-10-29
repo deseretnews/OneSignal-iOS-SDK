@@ -807,7 +807,9 @@ static OneSignal* singleInstance = nil;
 }
 
 + (void)displayWebView:(NSURL*)url {
-    // Check if in-app or safari
+    // App is handling this
+    
+    /*// Check if in-app or safari
     __block BOOL inAppLaunch = [OneSignalUserDefaults.initStandard getSavedBoolForKey:OSUD_NOTIFICATION_OPEN_LAUNCH_URL defaultValue:false];
     
     // If the URL contains itunes.apple.com, it's an app store link
@@ -846,7 +848,7 @@ static OneSignal* singleInstance = nil;
         }];
     } else {
         openUrlBlock(true);
-    }
+    }*/
 }
 
 + (void)runOnMainThread:(void(^)())block {
